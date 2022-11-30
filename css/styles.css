@@ -114,6 +114,7 @@ h5 {
   cursor: initial;
   /* display: flex; */
   position: relative;
+  padding: 50px;
   width: 528px;
   height: 581px;
   margin: auto;
@@ -137,6 +138,21 @@ h5 {
   pointer-events: none;
   visibility: hidden;
   opacity: 0;
+}
+
+/* ================================================== FORMS ==================================== */
+
+.main-form {
+  /* background-color: #757575; */
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* gap: 15px; */
+}
+
+.form-input {
+  width: 100%;
 }
 
 /* ========================================= Hover and focus ==================================== */
