@@ -16,6 +16,7 @@
   --portfolio-bg-color: rgb(33 150 243/ 0.9);
   --about-bg-color: rgb(47 48 58 / 0.8);
   --semi-transparent: rgb(0 0 0 /0.5);
+  --form-semi-transparent: rgb(117 117 117 / 0.5);
 }
 /* * {
   margin: 0;
@@ -30,7 +31,8 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+p {
   margin: 0;
   padding: 0;
 }
@@ -62,12 +64,12 @@ h5 {
 /* ============================================= Links ======================================== */
 
 .style-link {
-  transition-property: color;
+  /* transition-property: color; */
   text-decoration: none;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.transparent {
+.info-link.transparent {
   color: var(--font-transparent);
 }
 
@@ -104,17 +106,17 @@ h5 {
   bottom: 0;
   background-color: var(--semi-transparent);
   z-index: 50;
-  transition-property: visibility, opacity;
+  /* transition-property: visibility, opacity; */
   visibility: visible;
   opacity: 1;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
   cursor: initial;
   /* display: flex; */
   position: relative;
-  padding: 50px;
+  padding: 40px;
   width: 528px;
   height: 581px;
   margin: auto;
@@ -142,28 +144,88 @@ h5 {
 
 /* ================================================== FORMS ==================================== */
 
+.h3-form {
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+}
+
 .main-form {
   /* background-color: #757575; */
-  margin-top: 20px;
+  margin-top: 12px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   /* height: 100%; */
   /* gap: 15px; */
 }
 
 .form-input {
   width: 100%;
+  height: 40px;
+  margin: 4px 0 10px 0;
 }
 
 .form-textarea {
   width: 100%;
-  height: 200px;
+  height: 120px;
   resize: none;
+  margin-top: 4px;
+  padding: 12px 16px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
 }
 
-/* .h3-form {
-} */
+.form-textarea::placeholder {
+  color: var(--form-semi-transparent);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+
+.label-style {
+  margin-right: auto;
+  color: var(--font-secondary-color);
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+}
+
+.form-policy-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  margin: 20px 0 30px 0;
+}
+
+.form-link-policy {
+  color: var(--hover-bg-color);
+}
+
+.btn-form {
+  margin: auto;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  width: 200px;
+  border: none;
+  padding: 10px 0px;
+  border-radius: 4px;
+  background-color: var(--hover-bg-color);
+  color: var(--color-white);
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.form-input:focus,
+.form-input:hover {
+  border: 10px solid;
+  border-color: var(--hover-bg-color);
+}
 
 /* ========================================= Hover and focus ==================================== */
 
@@ -192,7 +254,6 @@ h5 {
 .footer-social-icon:focus {
   cursor: pointer;
   background-color: var(--hover-bg-color);
-  /* color: black; */
   color: var(--color-white);
 }
 
@@ -245,9 +306,9 @@ h5 {
   letter-spacing: 0.03em;
   color: var(--color-white);
   background: var(--portfolio-bg-color);
-  transition-property: transform;
+  /* transition-property: transform; */
   transform: translateY(100%);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:hover .portfolio-overlay {
@@ -275,8 +336,8 @@ h5 {
   justify-content: center;
   align-items: center;
   color: var(--default-icon-color);
-  transition-property: color, background-color;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition-property: color, background-color; */
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon {
@@ -303,8 +364,8 @@ h5 {
   align-items: center;
   border: 1px solid;
   border-radius: 4px;
-  transition-property: color;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition-property: color; */
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-icon {
@@ -315,8 +376,8 @@ h5 {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition-property: color, background-color;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition-property: color, background-color; */
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ===================================== Font colors, sizes and weight =========================== */
@@ -421,8 +482,9 @@ h5 {
   border-radius: 4px;
   background-color: var(--color-white);
   color: var(--font-main-color);
-  transition-property: color, background-color;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  /* transition-property: color, background-color; */
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .about-h3 {
@@ -497,8 +559,8 @@ h5 {
   color: var(--font-main-color);
   background-color: var(--bg-medium-color);
   box-shadow: none;
-  transition-property: color, background-color, box-shadow;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition-property: color, background-color, box-shadow; */
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-title {
@@ -672,9 +734,9 @@ h5 {
 .portfolio-item {
   border-bottom: 1px solid #eeeeee;
   flex-basis: calc((100% - 60px) / 3);
-  box-shadow: none;
-  transition-property: box-shadow;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* box-shadow: none; */
+  /* transition-property: box-shadow; */
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:hover,

@@ -52,14 +52,18 @@
                 <button class="btn-modal" data-modal-close>&times;</button>
                 <h3 class="h3-form">Zostaw swoje dane w formularzu poniżej</h3>
                 <form class="main-form">
-                  <label for="user-name">Imie</label>
+                  <label class="label-style" for="user-name">Imie</label>
                   <input class="form-input" type="text" name="user-name" id="user-name" />
-                  <label for="user-telephone">Telefeon</label>
+                  <label class="label-style" for="user-telephone">Telefeon</label>
                   <input class="form-input" type="tel" name="user-telephone" id="user-telephone" />
-                  <label for="user-email">Email</label>
+                  <label class="label-style" for="user-email">Email</label>
                   <input class="form-input" type="email" name="user-email" id="user-email" />
-                  <label for="user-comment">Komentarz</label>
-                  <textarea class="form-textarea" name="user-comment"></textarea>
+                  <label class="label-style" for="user-comment">Komentarz</label>
+                  <textarea class="form-textarea" name="user-comment" placeholder="Wprowadź tekst"></textarea>
+                  <p class="form-policy-text">
+                    Oświadczam iż akceptuję <a class="form-link-policy" href="#">Regulamin</a> i <a class="form-link-policy" href="#">Politykę Prywatności</a>
+                  </p>
+                  <button class="btn-form" type="submit">Wyślij</button>
                 </form>
               </div>
             </div>
