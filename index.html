@@ -54,15 +54,20 @@
                 <form class="main-form">
                   <label class="label-style" for="user-name">Imie</label>
                   <input class="form-input" type="text" name="user-name" id="user-name" />
-                  <label class="label-style" for="user-telephone">Telefeon</label>
+                  <label class="label-style" for="user-telephone">Telefon</label>
                   <input class="form-input" type="tel" name="user-telephone" id="user-telephone" />
                   <label class="label-style" for="user-email">Email</label>
                   <input class="form-input" type="email" name="user-email" id="user-email" />
                   <label class="label-style" for="user-comment">Komentarz</label>
                   <textarea class="form-textarea" name="user-comment" placeholder="Wprowadź tekst"></textarea>
-                  <p class="form-policy-text">
-                    Oświadczam iż akceptuję <a class="form-link-policy" href="#">Regulamin</a> i <a class="form-link-policy" href="#">Politykę Prywatności</a>
-                  </p>
+                  <div class="form-policy-text">
+                    <svg class="icon-check-off" width="15" height="16">
+                      <use href="images/icons.svg#icon-form-check-off"></use>
+                    </svg>
+                    <p>
+                      Oświadczam iż akceptuję <a class="form-link-policy" href="#">Regulamin</a> i <a class="form-link-policy" href="#">Politykę Prywatności</a>
+                    </p>
+                  </div>
                   <button class="btn-form" type="submit">Wyślij</button>
                 </form>
               </div>
