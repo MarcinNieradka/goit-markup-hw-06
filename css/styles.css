@@ -225,6 +225,22 @@ p {
 }
 
 .form-checkbox {
+  width: 155px;
+  height: 155px;
+  position: relative;
+  border: 1px solid;
+  border-radius: 2px;
+}
+
+.form-checkbox:checked {
+  background-image: url("../images/icons.svg#icon-form-check-on");
+}
+
+.hidden {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
 }
 
 .form-link-policy {
