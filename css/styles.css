@@ -166,6 +166,23 @@ h5 {
   /* gap: 15px; */
 }
 
+.label-style {
+  position: relative;
+  margin-right: auto;
+  color: var(--font-secondary-color);
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+}
+.form-icon {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  color: silver;
+  z-index: 40;
+  fill: currentColor;
+}
+
 .form-input {
   position: relative;
   width: 100%;
@@ -176,7 +193,7 @@ h5 {
   border: 1px solid var(--form-border-color);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  background-image: url("../images/vector.svg");
+  background-image: url("../images/form-user.svg");
   background-repeat: no-repeat;
   background-position-y: center;
   background-position-x: 15px;
@@ -192,10 +209,8 @@ h5 {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-
   outline: none;
   border: 1px solid var(--form-border-color);
-
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -204,14 +219,6 @@ h5 {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
-  letter-spacing: 0.01em;
-}
-
-.label-style {
-  margin-right: auto;
-  color: var(--font-secondary-color);
-  font-weight: 400;
-  font-size: 12px;
   letter-spacing: 0.01em;
 }
 
@@ -234,6 +241,7 @@ h5 {
   position: relative;
   border: 1px solid;
   border-radius: 2px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hidden {
@@ -272,6 +280,8 @@ h5 {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.form-checkbox:hover,
+.form-checkbox:focus,
 .form-input:focus,
 .form-input:hover,
 .form-textarea:hover,
@@ -280,6 +290,10 @@ h5 {
 .input-newsletter-footer:focus {
   outline: none;
   border: 1px solid var(--hover-bg-color);
+}
+
+.form-input:hover .form-icon {
+  color: #2196f3;
 }
 
 .btn-form {
@@ -410,7 +424,7 @@ h5 {
   margin-right: 5px;
   /* margin: 0;
   padding: 0; */
-  --color1: currentColor;
+  --color3: currentColor;
 }
 
 .team-social-icon {
