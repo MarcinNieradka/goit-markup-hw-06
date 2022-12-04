@@ -164,37 +164,36 @@ h5 {
   /* align-items: flex-start; */
   /* height: 100%; */
   /* gap: 15px; */
-  fill: currentColor;
+  fill: var(--default-icon-color);
 }
 
 .form-div {
   text-align: left;
+  /* margin-right: auto; */
+  /* color: var(--font-secondary-color); */
+  /* font-weight: 400; */
+  /* font-size: 12px; */
+  /* letter-spacing: 0.01em; */
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.label-style {
+  position: relative;
   /* margin-right: auto; */
   color: var(--font-secondary-color);
   font-weight: 400;
   font-size: 12px;
   letter-spacing: 0.01em;
 }
-
-.label-style {
-  position: relative;
-  /* margin-right: auto; */
-  /* color: var(--font-secondary-color);   */
-  /* font-weight: 400; */
-  /* font-size: 12px; */
-  /* letter-spacing: 0.01em; */
-  /* fill: red; */
-}
 .form-icon {
   position: absolute;
-  top: 30px;
+  top: 33px;
   left: 15px;
   color: silver;
   z-index: 40;
-  /* color: red; */
-  /* fill: red; */
 }
 
+.form-div:hover,
 .form-div:focus-within {
   /* color: var(--hover-bg-color); */
   /* fill: currentColor; */
@@ -307,7 +306,7 @@ h5 {
 .input-newsletter-footer:hover,
 .input-newsletter-footer:focus {
   outline: none;
-  border: 1px solid var(--hover-bg-color);
+  border: 2px solid var(--hover-bg-color);
 }
 
 .form-input:hover .form-icon {
