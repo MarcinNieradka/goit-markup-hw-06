@@ -149,7 +149,7 @@ h5 {
   border: 1px solid rgba(255, 0, 0, 0.1);
 }
 
-.backdrop.is-hidden .modal {
+.is-hidden .modal {
   transform: rotateY(180deg);
 }
 
