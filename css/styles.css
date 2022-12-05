@@ -99,10 +99,10 @@ h5 {
   background: var(--hover-bg-color);
 }
 
-.curr-link:hover::after {
+/* .curr-link:hover::after {
   pointer-events: none;
   cursor: default;
-}
+} */
 
 /* ============================================== MODAL ============================================ */
 
