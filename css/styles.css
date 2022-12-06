@@ -267,7 +267,7 @@ h5 {
 
 .form-checkbox {
   width: 15px;
-  height: 15px;
+  height: 14px;
   position: relative;
   border: 1px solid;
   border-radius: 2px;
@@ -282,8 +282,23 @@ h5 {
 }
 
 .form-checkbox:checked {
-  background-image: url("../images/vector.svg");
+  /* background-image: url("../images/vector.svg"); */
+  display: inline-block;
+  background-image: url("../images/icons.svg#icon-form-check-on");
   background-size: auto 100%;
+  fill: #2196f3;
+}
+
+.form-checkbox:checked::before {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-image: url("../images/vector.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .form-link-policy {
