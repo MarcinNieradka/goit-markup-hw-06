@@ -203,13 +203,13 @@ h5 {
   position: absolute;
   top: 31px;
   left: 13px;
-  color: silver;
   z-index: 40;
+  fill: var(--color-black);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-div:hover,
-.form-div:focus-within {
-  /* fill: currentColor; */
+.form-div:hover .form-icon,
+.form-div:focus-within .form-icon {
   fill: var(--hover-bg-color);
 }
 
@@ -281,13 +281,13 @@ h5 {
   outline: none;
 }
 
-.form-checkbox:checked {
-  /* background-image: url("../images/vector.svg"); */
+/* .form-checkbox:checked {
+  background-image: url("../images/vector.svg");
   display: inline-block;
   background-image: url("../images/icons.svg#icon-form-check-on");
   background-size: auto 100%;
   fill: #2196f3;
-}
+} */
 
 .form-checkbox:checked::before {
   position: absolute;
@@ -296,7 +296,6 @@ h5 {
   content: url("../images/vector.svg");
   width: 15px;
   height: 15px;
-  /* background-image: url("../images/vector.svg"); */
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -337,9 +336,9 @@ h5 {
   border: 1px solid var(--hover-bg-color);
 }
 
-.form-input:hover .form-icon {
-  color: #2196f3;
-}
+/* .form-input:hover .form-icon {
+  fill: var(--hover-bg-color);
+} */
 
 .btn-form {
   margin: auto;
@@ -371,6 +370,10 @@ h5 {
   color: var(--color-white);
   cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.btn-footer-form:hover > .icon-send {
+  transform: rotate(360deg);
 }
 
 /* ========================================= Hover and focus ==================================== */
@@ -494,6 +497,8 @@ h5 {
 
 .icon-send {
   fill: currentColor;
+  transform: rotate(0deg);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-list {
