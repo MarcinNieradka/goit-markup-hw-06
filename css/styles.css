@@ -186,6 +186,7 @@ h5 {
   /* font-weight: 400; */
   /* font-size: 12px; */
   /* letter-spacing: 0.01em; */
+  fill: var(--color-black);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -202,14 +203,13 @@ h5 {
 .form-icon {
   position: absolute;
   top: 31px;
-  left: 13px;
+  left: 12px;
   z-index: 40;
-  fill: var(--color-black);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-div:hover .form-icon,
-.form-div:focus-within .form-icon {
+.form-div:hover,
+.form-div:focus-within {
   fill: var(--hover-bg-color);
 }
 
@@ -218,7 +218,12 @@ h5 {
   width: 100%;
   height: 40px;
   margin: 4px 0px 10px 0px;
-  padding-left: 42px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  /* padding-left: 42px; */
+  text-indent: 42px;
   outline: none;
   border: 1px solid var(--form-border-color);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -265,20 +270,20 @@ h5 {
   margin: 20px 0px 30px 0px;
 }
 
-.form-checkbox {
-  width: 15px;
-  height: 14px;
-  position: relative;
-  border: 1px solid;
-  border-radius: 2px;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .hidden-checkbox {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
   outline: none;
+}
+
+.form-checkbox {
+  width: 16px;
+  height: 15px;
+  position: relative;
+  border: 1px solid;
+  border-radius: 2px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* .form-checkbox:checked {
@@ -293,7 +298,7 @@ h5 {
   position: absolute;
   top: -1px;
   left: -1px;
-  content: url("../images/vector.svg");
+  content: url("../images/check-in.svg");
   width: 15px;
   height: 15px;
   background-repeat: no-repeat;
@@ -594,6 +599,11 @@ h5 {
   line-height: 1.14;
   letter-spacing: 0.02em;
   /* vertical-align: middle; */
+}
+
+.mail-link:hover .icon-nav,
+.tel-link:hover .icon-nav {
+  animation: animateY-10 1000ms 1;
 }
 
 .tel-link {
@@ -926,4 +936,20 @@ h5 {
   list-style-type: none;
   display: flex;
   gap: 10px;
+}
+
+/* ==================================== ANIMATIONS =========================== */
+
+@keyframes animateY-10 {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
