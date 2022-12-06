@@ -293,10 +293,10 @@ h5 {
   position: absolute;
   top: -1px;
   left: -1px;
-  content: "";
+  content: url("../images/vector.svg");
   width: 15px;
   height: 15px;
-  background-image: url("../images/vector.svg");
+  /* background-image: url("../images/vector.svg"); */
   background-repeat: no-repeat;
   background-size: contain;
 }
