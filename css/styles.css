@@ -471,6 +471,10 @@ h5 {
 
 /* ============================================== ICONS =========================== */
 
+svg {
+  display: inline-block;
+}
+
 .icon-nav {
   /* display: inline-block; */
   vertical-align: middle;
