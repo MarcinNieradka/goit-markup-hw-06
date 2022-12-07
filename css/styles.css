@@ -277,7 +277,7 @@ h5 {
   outline: none;
 }
 
-.form-checkbox {
+.form-checkbox-class {
   width: 16px;
   height: 15px;
   position: relative;
@@ -286,7 +286,7 @@ h5 {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* .form-checkbox:checked {
+/* .form-checkbox-class:checked {
   background-image: url("../images/vector.svg");
   display: inline-block;
   background-image: url("../images/icons.svg#icon-form-check-on");
@@ -294,7 +294,7 @@ h5 {
   fill: #2196f3;
 } */
 
-.form-checkbox:checked::before {
+.form-checkbox-class:checked::before {
   position: absolute;
   top: -1px;
   left: -1px;
@@ -329,8 +329,8 @@ h5 {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-checkbox:hover,
-.form-checkbox:focus,
+.form-checkbox-class:hover,
+.form-checkbox-class:focus,
 .form-input:focus,
 .form-input:hover,
 .form-textarea:hover,
